@@ -44,7 +44,7 @@ function acessleftbar(){
 	navigation_leftbar = "1";
 	on_leftbar = "1";
 		idbutton = "1";
-		playAcess();
+		playToogle();
 		$("#guide-101").css("background", "#fff");
 		$("#guide-102").css("background", "transparent");
 		$("#guide-103").css("background", "transparent");
