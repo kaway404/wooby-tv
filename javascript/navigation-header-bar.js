@@ -91,21 +91,27 @@ function navigationBarBottom(){
 			acessleftbar();
 			$("#guide-101").css("background", "transparent");
 			$("#guide-102").css("background", "#fff");
-			idbutton = "2";
 			$.post( "/api/default.php", function( data ) {
 				  $( "#app" ).html( data );
 			});
+			idbutton = "2";
 		}
 		else if(idbutton == "2"){
 			closeSearchbar();
 			$("#guide-102").css("background", "transparent");
 			$("#guide-103").css("background", "#fff");
+			$.post( "/api/gostei.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 			idbutton = "3";
 		}
 		else if(idbutton == "3"){
 			closeSearchbar();
 			$("#guide-103").css("background", "transparent");
 			$("#guide-104").css("background", "#fff");
+			$.post( "/api/news.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 			idbutton = "4";
 		}
 		else if(idbutton == "4"){
@@ -113,7 +119,11 @@ function navigationBarBottom(){
 			closeSearchbar();
 			$("#guide-104").css("background", "transparent");
 			$("#guide-105").css("background", "#fff");
+			$.post( "/api/account.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 			idbutton = "5";
+
 		}
 		}
 		else if(idbutton == "5"){
@@ -121,6 +131,9 @@ function navigationBarBottom(){
 			closeSearchbar();
 			$("#guide-105").css("background", "transparent");
 			$("#guide-106").css("background", "#fff");
+			$.post( "/api/settings.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 			idbutton = "6";
 		}
 		}
@@ -135,6 +148,9 @@ function navigationBarTop(){
 			block.pause();
 			block.currentTime = 0;
 			}, 100);
+			$.post( "/api/busca.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 		}
 		else if(idbutton == "6"){
 			if ($('.left-menu-browser-bro .bottom').is(":visible")){
@@ -143,6 +159,9 @@ function navigationBarTop(){
 			$("#guide-106").css("background", "transparent");
 			$("#guide-105").css("background", "#fff");
 			idbutton = "5";
+			$.post( "/api/account.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 		}
 		}
 		else if(idbutton == "5"){
@@ -152,6 +171,9 @@ function navigationBarTop(){
 			$("#guide-105").css("background", "transparent");
 			$("#guide-104").css("background", "#fff");
 			idbutton = "4";
+			$.post( "/api/news.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 		}
 		}
 		else if(idbutton == "4"){
@@ -160,6 +182,9 @@ function navigationBarTop(){
 			$("#guide-104").css("background", "transparent");
 			$("#guide-103").css("background", "#fff");
 			idbutton = "3";
+			$.post( "/api/gostei.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 		}
 		else if(idbutton == "3"){
 			playToogle();
@@ -167,6 +192,9 @@ function navigationBarTop(){
 			$("#guide-103").css("background", "transparent");
 			$("#guide-102").css("background", "#fff");
 			idbutton = "2";
+			$.post( "/api/default.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 		}
 		else if(idbutton == "2"){
 			playToogle();
@@ -223,6 +251,9 @@ $("#guide-103").click(function(){
 	$("#guide-101").css("background", "transparent");
 	$("#guide-103").css("background", "#fff");
 	idbutton = "3";
+	$.post( "/api/gostei.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
 });
 
 $("#guide-104").click(function(){
@@ -235,6 +266,9 @@ $("#guide-104").click(function(){
 	$("#guide-106").css("background", "transparent");
 	$("#guide-104").css("background", "#fff");
 	idbutton = "4";
+	$.post( "/api/news.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
 });
 
 $("#guide-105").click(function(){
@@ -247,6 +281,9 @@ $("#guide-105").click(function(){
 	$("#guide-106").css("background", "transparent");
 	$("#guide-105").css("background", "#fff");
 	idbutton = "5";
+	$.post( "/api/account.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
 });
 
 $("#guide-106").click(function(){
@@ -259,6 +296,9 @@ $("#guide-106").click(function(){
 	$("#guide-105").css("background", "transparent");
 	$("#guide-106").css("background", "#fff");
 	idbutton = "6";
+	$.post( "/api/settings.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
 });
 }
 
