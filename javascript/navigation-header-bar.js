@@ -51,6 +51,7 @@ function acessleftbar(){
 		idbutton = "1";
 		playAcess();
 		$("#guide-101").css("background", "#fff");
+		$("#guide-102").css("background", "transparent");
 		$(".tuturial .search").hide();
 		$(".tuturial .sair").show();
 		$.post( "/api/busca.php", function( data ) {
