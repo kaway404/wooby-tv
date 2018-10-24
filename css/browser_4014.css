@@ -48,4 +48,6 @@
 	top: 30px;
 	transform: scale(1.2);
 	margin-left: 65px;
+	background-image: url(/img/video.jpg);
+	background-size: cover;
 }

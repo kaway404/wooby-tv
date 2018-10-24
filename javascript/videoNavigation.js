@@ -20,11 +20,9 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 function videoRight(){
 	if(videoAtual == videoMax){
 		console.log("maximo");
-		videohtml = "#video" + videoAtual;
-		$(inicio).css("background", "#fff");
+		videohtml = "#video" + videoAtual;;
 		$(inicio).css("transform", "scale(1.23)");
 		$(videohtml).css("transform", "scale(1.2)");
-		$(videohtml).css("background", "#151515");
 		videoAtual = 0;
 	}
 	else{
@@ -32,10 +30,8 @@ function videoRight(){
 	let videoMenos = videoAtual - 1;
 	videohtml = "#video" + videoAtual;
 	videohtmlmenos = "#video" + videoMenos;
-	$(videohtml).css("background", "#fff");
 	$(videohtml).css("transform", "scale(1.23)");
 	$(videohtmlmenos).css("transform", "scale(1.2)");
-	$(videohtmlmenos).css("background", "#151515");
 	playToogle();
 }
 }
