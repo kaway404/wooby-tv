@@ -191,6 +191,9 @@ $("#guide-101").click(function(){
 	$("#guide-106").css("background", "transparent");
 	$("#guide-101").css("background", "#fff");
 	idbutton = "1";
+	$.post( "/api/busca.php", function( data ) {
+	  $( "#app" ).html( data );
+});
 });
 
 $("#guide-102").click(function(){
@@ -203,6 +206,9 @@ $("#guide-102").click(function(){
 	$("#guide-105").css("background", "transparent");
 	$("#guide-102").css("background", "#fff");
 	idbutton = "2";
+	$.post( "/api/default.php", function( data ) {
+	  $( "#app" ).html( data );
+});
 });
 
 $("#guide-103").click(function(){
