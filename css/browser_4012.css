@@ -52,7 +52,7 @@
 }
 
 .left-menu-browser-bro #guide-logo:hover{
-	background: transparent;
+	background-image: url(/img/logo.png);
 }
 
 .left-menu-browser-bro .bottom{

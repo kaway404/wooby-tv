@@ -98,16 +98,20 @@ function navigationBarBottom(){
 			idbutton = "4";
 		}
 		else if(idbutton == "4"){
+		if ($('.left-menu-browser-bro .bottom').is(":visible")){
 			closeSearchbar();
 			$("#guide-104").css("background", "transparent");
 			$("#guide-105").css("background", "#fff");
 			idbutton = "5";
 		}
+		}
 		else if(idbutton == "5"){
+			if ($('.left-menu-browser-bro .bottom').is(":visible")){
 			closeSearchbar();
 			$("#guide-105").css("background", "transparent");
 			$("#guide-106").css("background", "#fff");
 			idbutton = "6";
+		}
 		}
 	}
 }
@@ -122,18 +126,22 @@ function navigationBarTop(){
 			}, 100);
 		}
 		else if(idbutton == "6"){
+			if ($('.left-menu-browser-bro .bottom').is(":visible")){
 			playToogle();
 			closeSearchbar();
 			$("#guide-106").css("background", "transparent");
 			$("#guide-105").css("background", "#fff");
 			idbutton = "5";
 		}
+		}
 		else if(idbutton == "5"){
+			if ($('.left-menu-browser-bro .bottom').is(":visible")){
 			playToogle();
 			closeSearchbar();
 			$("#guide-105").css("background", "transparent");
 			$("#guide-104").css("background", "#fff");
 			idbutton = "4";
+		}
 		}
 		else if(idbutton == "4"){
 			playToogle();
