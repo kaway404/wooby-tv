@@ -10,7 +10,7 @@
 	<li id="guide-103"><i class="material-icons md-48" data-id="3">thumb_up</i></li>
 	<li id="guide-104"><i class="material-icons md-48" data-id="4">timeline</i></li>
 	<li id="guide-105"><i class="material-icons md-48" data-id="5">account_circle</i></li>
-	<div class="bottom">
+	<div class="bottom" style="display: none;">
 		<li id="guide-106"><i class="material-icons md-48" data-id="6">settings</i></li>
 	</div>
 </div>
