@@ -4,4 +4,4 @@ setTimeout(function(){
 	  $(".splash").hide();
 	  $(".splash").css("transform", "scale(0.8)");
 	});
-}, 100);
+}, 4000);

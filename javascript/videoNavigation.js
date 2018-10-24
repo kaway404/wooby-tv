@@ -3,6 +3,8 @@ let videohtml = "#video" + videoAtual;
 let videoMax = 3;
 let inicio = "#video" + 1;
 
+clear();
+
 document.querySelector('body').addEventListener('keydown', function(event) {
  
 	var tecla = event.keyCode;
@@ -45,4 +47,8 @@ function playToogle(){
 	toggle.pause();
 	toggle.currentTime = 0;
 	}, 100);
+}
+
+function clear(){
+	videoAtual = 0;
 }
