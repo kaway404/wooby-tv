@@ -114,7 +114,6 @@ function navigationBarBottom(){
 			idbutton = "4";
 		}
 		else if(idbutton == "4"){
-		if ($('.left-menu-browser-bro .bottom').is(":visible")){
 			closeSearchbar();
 			$("#guide-104").css("background", "transparent");
 			$("#guide-105").css("background", "#fff");
@@ -123,7 +122,6 @@ function navigationBarBottom(){
 			});
 			idbutton = "5";
 
-		}
 		}
 		else if(idbutton == "5"){
 			if ($('.left-menu-browser-bro .bottom').is(":visible")){
@@ -164,7 +162,6 @@ function navigationBarTop(){
 		}
 		}
 		else if(idbutton == "5"){
-			if ($('.left-menu-browser-bro .bottom').is(":visible")){
 			playToogle();
 			closeSearchbar();
 			$("#guide-105").css("background", "transparent");
@@ -173,7 +170,6 @@ function navigationBarTop(){
 			$.post( "/api/news.php", function( data ) {
 				  $( "#app" ).html( data );
 			});
-		}
 		}
 		else if(idbutton == "4"){
 			playToogle();
