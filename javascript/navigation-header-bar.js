@@ -1,6 +1,6 @@
-let navigation_leftbar = "0";
-let on_leftbar = "0";
-let idbutton = "0";
+let navigation_leftbar = "1";
+let on_leftbar = "1";
+let idbutton = "2";
 
 ClickFunctioNavigation();
 homeAcess();
