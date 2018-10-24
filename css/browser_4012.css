@@ -8,13 +8,12 @@
 
 .browserWeb{
 	position: absolute;
-	width: calc(100% - 5em);
-	height: calc(100% - 5em);
+	width: calc(100% - 12em);
+	height: 100%;
 	background: #2f2f2f;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	padding: 20px;
 }
 
 .browserWeb li{
@@ -99,11 +98,4 @@
 
 .tuturial .search{
 	background-position: 0 100%;
-}
-
-@media only screen and (min-width: 1878px) {
-.browserWeb{
-	width: calc(100% - 5em);
-	height: calc(100% - 5em);
-}
 }
