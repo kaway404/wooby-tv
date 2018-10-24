@@ -5,6 +5,7 @@
 	float: right;
 	right: 0;
 	top: 0;
+	overflow: hidden;
 }
 
 .browsernani .tab{
@@ -27,6 +28,7 @@
 
 .browsernani .watch-list{
 	white-space: nowrap;
+	overflow: hidden;
 }
 
 .browsernani .watch-list h1{
@@ -39,7 +41,7 @@
 .browsernani .watch-list .wath-app-list{
 	position: relative;
 	display: inline-block;
-	width: 20em;
+	width: 400px;
 	height: 13em;
 	background: #151515;
 	left: 15px;
