@@ -36,8 +36,9 @@
     background-color: #282828;
     box-shadow: 0 0 0.75rem 0 rgba(0,0,0,0.24), 0 0 0.75rem 0 rgba(0,0,0,0.48);
     height: 100%;
-    overflow: hidden;
     width: 8.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .left-menu-browser-bro #guide-logo{

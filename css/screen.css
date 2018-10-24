@@ -6,19 +6,6 @@
 	}
 }
 
-@media only screen and (max-height: 814px) {
-	.left-menu-browser-bro li .material-icons{
-		font-size: 2rem !important;
-		left: 10px !important;
-		top: 30px !important; 
-	}
-
-	.browserWeb li{
-		transform: scale(0.8);
-	}
-
-}
-
 @media only screen and (max-height: 803px) {
 	.left-menu-browser-bro .bottom{
 		display: none;
