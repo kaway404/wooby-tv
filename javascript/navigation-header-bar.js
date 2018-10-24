@@ -45,7 +45,7 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 
 function acessleftbar(){
 	//Set navigation bar
-	if(navigation_leftbar == "0"){
+	if(navigation_leftbar == "1"){
 	navigation_leftbar = "1";
 	on_leftbar = "1";
 		idbutton = "1";
