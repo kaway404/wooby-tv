@@ -21,12 +21,7 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 	 
 	 closeleftbar();
 		
-	} else if(tecla == 37) {
-	 
-	acessleftbar();
-		
-	}
-	else if(tecla == 83) {
+	} else if(tecla == 83) {
 	 
 	acessleftbar();
 		
