@@ -3,6 +3,7 @@ let on_leftbar = "0";
 let idbutton = "0";
 
 ClickFunctioNavigation();
+homeAcess();
 
 $.post( "/api/default.php", function( data ) {
 	  $( "#app" ).html( data );
@@ -283,4 +284,9 @@ function closeSearchbar(){
 		$("#guide-101").css("background", "transparent");
 		$(".tuturial .search").show();
 		$(".tuturial .sair").hide();
+}
+
+
+function homeAcess(){
+	$("#guide-102").css("background", "#fff");
 }
