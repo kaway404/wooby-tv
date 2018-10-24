@@ -4,6 +4,10 @@ let idbutton = "0";
 
 ClickFunctioNavigation();
 
+$.post( "/api/default.php", function( data ) {
+	  $( "#app" ).html( data );
+});
+
 document.querySelector('body').addEventListener('keydown', function(event) {
  
 	var tecla = event.keyCode;
@@ -30,10 +34,6 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 	 
 	 navigationBarTop();
 		
-	} else if(tecla == 39) {
-	 
-	 // seta pra DIREITA
-		
 	} else if(tecla == 40) {
 	 
 	 navigationBarBottom()
@@ -52,6 +52,9 @@ function acessleftbar(){
 		$("#guide-101").css("background", "#fff");
 		$(".tuturial .search").hide();
 		$(".tuturial .sair").show();
+		$.post( "/api/busca.php", function( data ) {
+				  $( "#app" ).html( data );
+		});
 	}
 }
 
@@ -69,6 +72,9 @@ function closeleftbar(){
 		$("#guide-106").css("background", "transparent");
 		$(".tuturial .search").show();
 		$(".tuturial .sair").hide();
+		$.post( "/api/default.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 }
 }
 
@@ -84,6 +90,9 @@ function navigationBarBottom(){
 			$("#guide-101").css("background", "transparent");
 			$("#guide-102").css("background", "#fff");
 			idbutton = "2";
+			$.post( "/api/default.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 		}
 		else if(idbutton == "2"){
 			closeSearchbar();
@@ -163,6 +172,9 @@ function navigationBarTop(){
 			$("#guide-102").css("background", "transparent");
 			$("#guide-101").css("background", "#fff");
 			idbutton = "1";
+			$.post( "/api/busca.php", function( data ) {
+				  $( "#app" ).html( data );
+			});
 		}
 	}
 }

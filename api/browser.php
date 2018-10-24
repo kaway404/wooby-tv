@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/browser_4012.css">
+<link rel="stylesheet" href="/css/browser_4014.css">
 
 <div class="browserWeb">
 <!-- Left Menu Browser -->
@@ -23,6 +24,13 @@
 		<p>Voltar</p>
 	</div>
 </div>
+
+<div class="center-browser-bro">
+	<div id="app">
+
+	</div>
+</div>
+
 
 </div>
 
