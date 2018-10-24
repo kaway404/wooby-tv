@@ -64,10 +64,10 @@ function closeleftbar(){
 	if(navigation_leftbar == "1"){
 	navigation_leftbar = "1";
 	on_leftbar = "1";
-	idbutton = "1";
+	idbutton = "1	";
 		playAcess();
 		$("#guide-101").css("background", "transparent");
-		$("#guide-102").css("background", "transparent");
+		$("#guide-102").css("background", "#fff");
 		$("#guide-103").css("background", "transparent");
 		$("#guide-104").css("background", "transparent");
 		$("#guide-105").css("background", "transparent");
