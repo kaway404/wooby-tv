@@ -41,11 +41,11 @@
 .browsernani .watch-list .wath-app-list{
 	position: relative;
 	display: inline-block;
-	width: 400px;
-	height: 13em;
+	width: 20em;
+	height: 15em;
 	background: #151515;
 	left: 15px;
 	top: 30px;
 	transform: scale(1.2);
-	margin-left: 50px;
+	margin-left: 65px;
 }

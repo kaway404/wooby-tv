@@ -15,9 +15,3 @@
 		transform: scale(1);
 	}
 }
-
-@media only screen and (min-width: 411px){
-	.browsernani .watch-list .wath-app-list{
-		width: 250px !important;
-	}
-}
