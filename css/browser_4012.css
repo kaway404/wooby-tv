@@ -1,0 +1,101 @@
+.left-menu-browser-bro li .material-icons{
+	color: #6a6a6a;
+	font-size: 3rem;
+	position: relative;
+ 	margin-left: 3rem;
+ 	top: 25px;
+}
+
+.browserWeb{
+	position: absolute;
+	width: calc(100% - 0px);
+	height: calc(100% - 100px);
+	background: #2f2f2f;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+}
+
+.browserWeb li{
+	list-style: none;
+	cursor: pointer;
+	width: 100%;
+	height: 100px;
+	margin-top: -2px;
+}
+
+.browserWeb li:hover{
+	background: #373737;
+}
+
+.left-menu-browser-bro{
+	left: 0;
+    position: absolute;
+    top: 0;
+    background-color: #282828;
+    box-shadow: 0 0 0.75rem 0 rgba(0,0,0,0.24), 0 0 0.75rem 0 rgba(0,0,0,0.48);
+    height: 100%;
+    overflow: hidden;
+    width: 8.5rem;
+}
+
+.left-menu-browser-bro #guide-logo{
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 5rem;
+    width: 5rem;
+    background-image: url(/img/logo.png);
+    margin: 2.5rem 1.5rem 2.5rem 2rem;
+    transform: scale(1);
+}
+
+.left-menu-browser-bro #guide-logo:hover{
+	background: transparent;
+}
+
+.left-menu-browser-bro .bottom{
+	position: absolute;
+	bottom: 0;
+	height: 200px;
+	width: 100%;
+}
+
+.tuturial{
+	position: absolute;
+	right: 0;
+	width: 15rem;
+	height: 10rem;
+	background: transparent;
+	bottom: 20px;
+}
+
+.tuturial .navegar{
+	background-size: 240%;
+    background-image: url(/img/legend-sprite-desktop.png);
+    height: 3rem;
+    width: 3rem;
+    float: right;
+    right: 30px;
+    bottom: 30px;
+    position: absolute;
+    background-position: 0 100%;
+    background-size: 240%;
+    text-align: center;
+}
+
+.tuturial .navegar p{
+	color: #fff;
+	position: relative;
+	top: 50px;
+}
+
+.tuturial .sair{
+	background-position: 0 47.4%;
+	display: none;
+}
+
+.tuturial .search{
+	background-position: 0 100%;
+}
