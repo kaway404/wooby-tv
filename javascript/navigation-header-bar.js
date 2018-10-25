@@ -7,7 +7,7 @@ let atualv = 1;
 document.querySelector('body').addEventListener('keydown', function(event) {
  
 	var tecla = event.keyCode;
-	
+	if(logged == 0){
 	if(tecla == 13) {
 	 
 	 // tecla ENTER
@@ -39,6 +39,7 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 	 
 	  homets();
 		
+	}
 	}
  
 });
@@ -128,12 +129,12 @@ function closeleftbar(){
 
 function navigationBarBottom(){
 	if(on_leftbar == "1"){
-	toggle.play();
-	setTimeout(function(){
-	toggle.pause();
-	toggle.currentTime = 0
-	}, 100);
 		if(idbutton == "1"){
+			toggle.play();
+			setTimeout(function(){
+			toggle.pause();
+			toggle.currentTime = 0
+			}, 100);
 			acessleftbar();
 			$("#guide-101").css("background", "transparent");
 			$("#guide-102").css("background", "#fff");
@@ -143,6 +144,11 @@ function navigationBarBottom(){
 			idbutton = "2";
 		}
 		else if(idbutton == "2"){
+			toggle.play();
+			setTimeout(function(){
+			toggle.pause();
+			toggle.currentTime = 0
+			}, 100);
 			closeSearchbar();
 			$("#guide-102").css("background", "transparent");
 			$("#guide-103").css("background", "#fff");
@@ -152,6 +158,11 @@ function navigationBarBottom(){
 			idbutton = "3";
 		}
 		else if(idbutton == "3"){
+			toggle.play();
+			setTimeout(function(){
+			toggle.pause();
+			toggle.currentTime = 0
+			}, 100);
 			closeSearchbar();
 			$("#guide-103").css("background", "transparent");
 			$("#guide-104").css("background", "#fff");
@@ -161,6 +172,11 @@ function navigationBarBottom(){
 			idbutton = "4";
 		}
 		else if(idbutton == "4"){
+			toggle.play();
+			setTimeout(function(){
+			toggle.pause();
+			toggle.currentTime = 0
+			}, 100);
 			closeSearchbar();
 			$("#guide-104").css("background", "transparent");
 			$("#guide-105").css("background", "#fff");
@@ -168,7 +184,13 @@ function navigationBarBottom(){
 				  $( "#app" ).html( data );
 			});
 			idbutton = "5";
-
+		}
+		else if(idbutton == "5"){
+			block.play();
+			setTimeout(function(){
+			block.pause();
+			block.currentTime = 0;
+			}, 100);
 		}
 		else if(idbutton == "5"){
 			if ($('.left-menu-browser-bro .bottom').is(":visible")){

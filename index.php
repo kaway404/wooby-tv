@@ -17,6 +17,9 @@
 <?php
 include 'template/splash.phtml';
 include 'template/browser.phtml';
+if(empty($_COOKIE['userid'])){
+include 'template/welcome.phtml';
+}
 ?>
 
 <script src="/javascript/navigation-header-bar.js"></script>
