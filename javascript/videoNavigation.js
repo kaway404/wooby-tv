@@ -1,8 +1,8 @@
 let videoAtual = 1;
 let xandeco = 1;
-let maxscroll = 1;
+let maxscroll = 2;
 let videohtml = scroll + " " + "#video" + videoAtual;
-let videoMax = 13;
+let videoMax = 3;
 let inicio = scroll + " " + "#video" + 1;
 
 clear();
@@ -10,7 +10,7 @@ clear();
 document.querySelector('body').addEventListener('keydown', function(event) {
  
 	var tecla = event.keyCode;
-	
+	if(logged == 0){
 	if(tecla == 39) {
 	 videoRight();
 	}
@@ -24,19 +24,18 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 	else if(tecla == 27){
 		exitvideo();
 	}
-	// else if(tecla == 40) {
-	// 	passou();
-	// 	videoBottom();
-	// }
-	// else if(tecla == 38) {
-	// 	menos();
-	// 	videoTop();
-	// }
+	else if(tecla == 40) {
+	 	videoBottom();
+	 }
+	 else if(tecla == 38) {
+	 	videoTop();
+	 }
+	}
  	
 });
 
 function videoBottom(){
-	if(xandeco <= maxscroll){
+	if(xandeco < maxscroll){
 		xandeco += 1;
 		let scroll = "#genen" + xandeco;
 		let scrollantes = xandeco - 1;
@@ -58,27 +57,18 @@ function videoBottom(){
 		$(proximoscroll).css("margin-right", "5.5em");
 		$(proximoscroll).css("box-shadow", "2px 3px 4px rgba(0,0,0,.50)");
 		$(proximoscroll).css("opacity", "1");
-		videoAtual = 1;
 	}
 }
 
-function passou(){
-	if(xandeco > maxscroll ){
-		xandeco = 1;
-		alert("passou");
-	}
-}
-
-function menos(){
-	if(xandeco < maxscroll ){
-		xandeco = 1;
-		alert("menos");
-	}
-}
 
 function videoTop(){
-	if(xandeco <= maxscroll){
-		xandeco = 1;
+		if(xandeco >= 1){
+		if(xandeco == maxscroll){
+			xandeco -= 1;
+		}
+		else{
+			xandeco -= 1;
+		}
 		let scroll = "#genen" + xandeco;
 		let scrollantes = xandeco + 1;
 		let scrollvideo = "#genen" + scrollantes;
@@ -99,10 +89,6 @@ function videoTop(){
 		$(proximoscroll).css("margin-right", "5.5em");
 		$(proximoscroll).css("box-shadow", "2px 3px 4px rgba(0,0,0,.50)");
 		$(proximoscroll).css("opacity", "1");
-		videoAtual = 1;
-		}
-		else if(xandeco < maxscroll ){
-		xandeco = 1;
 		}
 }
 

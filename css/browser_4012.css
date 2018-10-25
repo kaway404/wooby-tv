@@ -69,6 +69,7 @@
 	height: 10rem;
 	background: transparent;
 	bottom: 20px;
+	z-index: 1000000000000;
 }
 
 .tuturial .navegar{
@@ -83,6 +84,7 @@
     background-position: 0 100%;
     background-size: 240%;
     text-align: center;
+    z-index: 1000000000000;
 }
 
 .tuturial .navegar p{
@@ -94,8 +96,10 @@
 .tuturial .sair{
 	background-position: 0 47.4%;
 	display: none;
+	z-index: 1000000000000;
 }
 
 .tuturial .search{
 	background-position: 0 100%;
+	z-index: 1000000000000;
 }
