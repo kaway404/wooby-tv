@@ -48,7 +48,7 @@ function homets(){
 	navigation_leftbar = "0";
 	on_leftbar = "0";
 	idbutton = "0";
-		playAcess();
+		playToogle();
 		$("#guide-101").css("background", "transparent");
 		$("#guide-102").css("background", "transparent");
 		$("#guide-103").css("background", "transparent");
@@ -107,11 +107,11 @@ function acessSearchbar(){
 }
 
 function closeleftbar(){
-	if(navigation_leftbar == "0"){
+	if(navigation_leftbar == "1"){
 	navigation_leftbar = "0";
 	on_leftbar = "0";
 	idbutton = "0";
-		playAcess();
+		playToogle();
 		$("#guide-101").css("background", "transparent");
 		$("#guide-102").css("background", "transparent");
 		$("#guide-103").css("background", "transparent");
@@ -257,14 +257,6 @@ function playToogle(){
 	setTimeout(function(){
 	toggle.pause();
 	toggle.currentTime = 0;
-	}, 100);
-}
-
-function playAcess(){
-	enter.play();
-	setTimeout(function(){
-	enter.pause();
-	enter.currentTime = 0;
 	}, 100);
 }
 
