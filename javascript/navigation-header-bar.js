@@ -18,7 +18,7 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 		
 	} else if(tecla == 83) {
 	 
-	acessleftbar();
+	acessSearchbar();
 		
 	}
 	else if(tecla == 37) {
@@ -86,8 +86,28 @@ function acessleftbar(){
 }
 }
 
+function acessSearchbar(){
+	if(navigation_leftbar == "0"){
+		navigation_leftbar = "1";
+		on_leftbar = "1";
+		idbutton = "1";
+		playToogle();
+		$("#guide-102").css("background", "transparent");
+		$("#guide-101").css("background", "#fff");
+		$("#guide-103").css("background", "transparent");
+		$("#guide-104").css("background", "transparent");
+		$("#guide-105").css("background", "transparent");
+		$("#guide-106").css("background", "transparent");
+		$(".tuturial .search").hide();
+		$(".tuturial .sair").show();
+		$.post( "/api/busca.php", function( data ) {
+				  $( "#app" ).html( data );
+		});
+	}
+}
+
 function closeleftbar(){
-	if(navigation_leftbar == "1"){
+	if(navigation_leftbar == "0"){
 	navigation_leftbar = "0";
 	on_leftbar = "0";
 	idbutton = "0";
