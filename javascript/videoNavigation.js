@@ -62,13 +62,31 @@ function videoBottom(){
 
 
 function videoTop(){
-		if(xandeco >= 1){
-		if(xandeco == maxscroll){
-			xandeco -= 1;
+		if(xandeco < 1 ){
+			xandeco = 1;
+			let scroll = "#genen" + xandeco;
+			let scrollantes = xandeco + 1;
+			let scrollvideo = "#genen" + scrollantes;
+			let proximoscroll = scroll + " " + "#video" + videoAtual;
+			let incioxande = scrollvideo + " " + "#video" + videoAtual;
+			$(incioxande).css("opacity", "0.4");
+			$(incioxande).css("transform", "scale(1)");
+			$(incioxande).css("height", "15em");
+			$(incioxande).css("z-index", "100");
+			$(incioxande).css("transform", "scale(1)");
+			$(incioxande).css("margin-left", "0em");
+			$(incioxande).css("margin-right", "0em");
+			$(incioxande).css("box-shadow", "2px 3px 4px transparent");
+			$(proximoscroll).css("transform", "scale(1.45)");
+			$(proximoscroll).css("z-index", "1000");
+			$(proximoscroll).css("height", "15em");
+			$(proximoscroll).css("margin-left", "5.5em");
+			$(proximoscroll).css("margin-right", "5.5em");
+			$(proximoscroll).css("box-shadow", "2px 3px 4px rgba(0,0,0,.50)");
+			$(proximoscroll).css("opacity", "1");
 		}
 		else{
-			xandeco -= 1;
-		}
+		xandeco -= 1;
 		let scroll = "#genen" + xandeco;
 		let scrollantes = xandeco + 1;
 		let scrollvideo = "#genen" + scrollantes;
@@ -118,8 +136,7 @@ function videoRight(){
 		$(videohtml).css("margin-left", "0em");
 		$(videohtml).css("margin-right", "0em");
 		$(videohtml).css("box-shadow", "2px 3px 4px transparent");
-		videoAtual = 0;
-		scrollPrev();
+		videoAtual = 1;
 		console.log(videoAtual);
 		playToogle();
 	}
@@ -183,7 +200,6 @@ function videoLeft(){
 		$(videohtmlmenos).css("opacity", "0.4");
 		playToogle();
 		console.log(videoAtual);
-		scrollPrev2();
 	}
 	else if(videoAtual == 0){
 	atualv = 0;
