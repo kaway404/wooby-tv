@@ -219,6 +219,7 @@ function atualvlol(){
 }
 
 function enter(){
+	if(on_leftbar == "0"){
 	if ($('.watch').is(":visible")){
 		console.log("watch visible");
 	}
@@ -227,6 +228,7 @@ function enter(){
 	setTimeout(function(){
 		$(".watch").css("transform", "scale(1)");
 	}, 300);
+}
 }
 }
 
