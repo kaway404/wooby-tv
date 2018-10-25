@@ -28,14 +28,16 @@
 
 .browsernani .watch-list{
 	white-space: nowrap;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
-.browsernani .watch-list h1{
+.browsernani h1{
 	color: #fff;
 	font-size: 1.9em;
 	position: relative;
 	left: 50px;
+	top: 5px;
 }
 
 .browsernani .watch-list .wath-app-list{
@@ -44,10 +46,129 @@
 	width: 20em;
 	height: 15em;
 	background: #151515;
-	left: 15px;
-	top: 30px;
-	transform: scale(1.2);
-	margin-left: 65px;
-	background-image: url(/img/video.jpg);
+	left: 55px;
+	top: 40px;
+	margin-left: 0px;
+	background-image: url(/img/cool.jpg);
 	background-size: cover;
+	transition: all 0.4s;
+	opacity: 0.4;
+}
+
+.browsernani .watch-list .wath-app-list .bottom{
+	background: #000;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	bottom: 0px;
+	z-index: 1000;
+}
+
+.browsernani .watch-list .wath-app-list .bottom h1{
+	position: absolute;
+	left: 10px;
+	top: 20px;
+	color: #fff;
+}
+
+.browsernani .slider{
+	position: relative;
+	top: 40px;
+}
+
+.watch{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #151515;
+	display: none;
+	z-index: 10000000;
+	transform: scale(0);
+	transition: all 0.4s;
+}
+
+.watch .preview{
+	width: 100%;
+	height: 100%;
+	background-image: url("https://i.ytimg.com/vi/40aex8C8Zzw/maxresdefault.jpg");
+	background-size: cover;
+}
+
+.watch .preview .avatar{
+	background-image: url(https://yt3.ggpht.com/-Feez6O4KkT8/AAAAAAAAAAI/AAAAAAAAARE/hgTr1LYFp14/s176-nd-c-c0xffffffff-rj-k-no/photo.jpg);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-size: cover;
+	transform: scale(1.2);
+	box-shadow: 1px 2px 3px rgba(0,0,0,.50);
+	top: 10px;
+	position: relative;
+}
+
+.watch .preview .margin{
+	top: 50px;
+	left: 80px;
+	position: relative;
+}
+
+.watch .notpreview{
+	background: transparent;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.watch .preview .margin .title{
+	color: #fff;
+	position: absolute;
+	left: 150px;
+	bottom: 40px;
+	font-size: 2em;
+}
+
+.watch .preview .margin .hold{
+	color: #ccc;
+	position: absolute;
+	left: 150px;
+	bottom: -5px;
+	font-size: 1.5em;
+}
+
+.watch .notpreview .progresste{
+	width: calc(100% - 40em);
+	height: .442em;
+    position: absolute;
+    background: #b9b9b9;
+    bottom: 10em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+}
+
+.watch .notpreview .subreprogress{
+	width: 5%;
+	height: 100%;
+	position: relative;
+	float: left;
+	left: 0;
+	background: #df2323;
+	border-radius: 5px;
+}
+
+.watch .notpreview .subreprogress .toggle{
+	width: 25px;
+	height: 25px;
+	background: #fafafa;
+	border-radius: 100%;
+	position: absolute;
+	bottom: -8px;
+	z-index: 1000;
+	left: 94%;
+}
+
+.watch .notpreview .subreprogress .toggle:active{
+
 }

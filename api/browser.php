@@ -34,4 +34,103 @@
 
 </div>
 
-<script src="/javascript/navigation-header-bar.js"></script>
+<script type="text/javascript">
+	$.post( "/api/default.php", function( data ) {
+	  $( "#app" ).html( data );
+	});
+
+ClickFunctioNavigation();
+
+function ClickFunctioNavigation(){
+
+$("#guide-101").click(function(){
+	playToogle();
+	acessleftbar();
+	$("#guide-102").css("background", "transparent");
+	$("#guide-103").css("background", "transparent");
+	$("#guide-104").css("background", "transparent");
+	$("#guide-105").css("background", "transparent");
+	$("#guide-106").css("background", "transparent");
+	$("#guide-101").css("background", "#fff");
+	idbutton = "1";
+	$.post( "/api/busca.php", function( data ) {
+	  $( "#app" ).html( data );
+});
+});
+
+$("#guide-102").click(function(){
+	playToogle();
+	closeSearchbar();
+	$("#guide-101").css("background", "transparent");
+	$("#guide-106").css("background", "transparent");
+	$("#guide-103").css("background", "transparent");
+	$("#guide-104").css("background", "transparent");
+	$("#guide-105").css("background", "transparent");
+	$("#guide-102").css("background", "#fff");
+	idbutton = "2";
+	$.post( "/api/default.php", function( data ) {
+	  $( "#app" ).html( data );
+});
+});
+
+$("#guide-103").click(function(){
+	playToogle();
+	closeSearchbar();
+	$("#guide-102").css("background", "transparent");
+	$("#guide-104").css("background", "transparent");
+	$("#guide-105").css("background", "transparent");
+	$("#guide-106").css("background", "transparent");
+	$("#guide-101").css("background", "transparent");
+	$("#guide-103").css("background", "#fff");
+	idbutton = "3";
+	$.post( "/api/gostei.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
+});
+
+$("#guide-104").click(function(){
+	playToogle();
+	closeSearchbar();
+	$("#guide-101").css("background", "transparent");
+	$("#guide-102").css("background", "transparent");
+	$("#guide-103").css("background", "transparent");
+	$("#guide-105").css("background", "transparent");
+	$("#guide-106").css("background", "transparent");
+	$("#guide-104").css("background", "#fff");
+	idbutton = "4";
+	$.post( "/api/news.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
+});
+
+$("#guide-105").click(function(){
+	playToogle();
+	closeSearchbar();
+	$("#guide-101").css("background", "transparent");
+	$("#guide-102").css("background", "transparent");
+	$("#guide-103").css("background", "transparent");
+	$("#guide-104").css("background", "transparent");
+	$("#guide-106").css("background", "transparent");
+	$("#guide-105").css("background", "#fff");
+	idbutton = "5";
+	$.post( "/api/account.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
+});
+
+$("#guide-106").click(function(){
+	playToogle();
+	closeSearchbar();
+	$("#guide-101").css("background", "transparent");
+	$("#guide-102").css("background", "transparent");
+	$("#guide-103").css("background", "transparent");
+	$("#guide-104").css("background", "transparent");
+	$("#guide-105").css("background", "transparent");
+	$("#guide-106").css("background", "#fff");
+	idbutton = "6";
+	$.post( "/api/settings.php", function( data ) {
+				  $( "#app" ).html( data );
+	});
+});
+}
+</script>

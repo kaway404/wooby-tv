@@ -1,13 +1,8 @@
-let navigation_leftbar = "1";
-let on_leftbar = "1";
-let idbutton = "2";
-
-ClickFunctioNavigation();
-homeAcess();
-
-$.post( "/api/default.php", function( data ) {
-	  $( "#app" ).html( data );
-});
+let navigation_leftbar = "0";
+let on_leftbar = "0";
+let idbutton = "0";
+let iddefault = "0";
+let atualv = 1;
 
 document.querySelector('body').addEventListener('keydown', function(event) {
  
@@ -25,6 +20,11 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 	 
 	acessleftbar();
 		
+	}
+	else if(tecla == 37) {
+	 
+	acessleftbar();
+		
 	} 
 	else if(tecla == 38) {
 	 
@@ -32,41 +32,68 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 		
 	} else if(tecla == 40) {
 	 
-	 navigationBarBottom()
+	 navigationBarBottom();
+		
+	}
+	else if(tecla == 39) {
+	 
+	  homets();
 		
 	}
  
 });
 
-function acessleftbar(){
-	//Set navigation bar
+function homets(){
 	if(navigation_leftbar == "1"){
-	navigation_leftbar = "1";
-	on_leftbar = "1";
-		idbutton = "1";
-		playToogle();
-		$("#guide-101").css("background", "#fff");
+	navigation_leftbar = "0";
+	on_leftbar = "0";
+	idbutton = "0";
+		playAcess();
+		$("#guide-101").css("background", "transparent");
 		$("#guide-102").css("background", "transparent");
 		$("#guide-103").css("background", "transparent");
 		$("#guide-104").css("background", "transparent");
 		$("#guide-105").css("background", "transparent");
 		$("#guide-106").css("background", "transparent");
+		$(".tuturial .search").show();
+		$(".tuturial .sair").hide();
+		$.post( "/api/default.php", function( data ) {
+				  $( "#app" ).html( data );
+		});
+}
+}
+
+function acessleftbar(){
+	//Set navigation bar
+	if(atualv == 0){
+	if(navigation_leftbar == "0"){
+		navigation_leftbar = "1";
+		on_leftbar = "1";
+		idbutton = "2";
+		playToogle();
+		$("#guide-101").css("background", "transparent");
+		$("#guide-102").css("background", "#fff");
+		$("#guide-103").css("background", "transparent");
+		$("#guide-104").css("background", "transparent");
+		$("#guide-105").css("background", "transparent");
+		$("#guide-106").css("background", "transparent");
 		$(".tuturial .search").hide();
-		$(".tuturial .sair").show();
-		$.post( "/api/busca.php", function( data ) {
+		$(".tuturial .sair").hide();
+		$.post( "/api/default.php", function( data ) {
 				  $( "#app" ).html( data );
 		});
 	}
 }
+}
 
 function closeleftbar(){
 	if(navigation_leftbar == "1"){
-	navigation_leftbar = "1";
-	on_leftbar = "1";
-	idbutton = "1";
+	navigation_leftbar = "0";
+	on_leftbar = "0";
+	idbutton = "0";
 		playAcess();
 		$("#guide-101").css("background", "transparent");
-		$("#guide-102").css("background", "#fff");
+		$("#guide-102").css("background", "transparent");
 		$("#guide-103").css("background", "transparent");
 		$("#guide-104").css("background", "transparent");
 		$("#guide-105").css("background", "transparent");
@@ -204,98 +231,6 @@ function navigationBarTop(){
 	}
 }
 
-function ClickFunctioNavigation(){
-
-$("#guide-101").click(function(){
-	playToogle();
-	acessleftbar();
-	$("#guide-102").css("background", "transparent");
-	$("#guide-103").css("background", "transparent");
-	$("#guide-104").css("background", "transparent");
-	$("#guide-105").css("background", "transparent");
-	$("#guide-106").css("background", "transparent");
-	$("#guide-101").css("background", "#fff");
-	idbutton = "1";
-	$.post( "/api/busca.php", function( data ) {
-	  $( "#app" ).html( data );
-});
-});
-
-$("#guide-102").click(function(){
-	playToogle();
-	closeSearchbar();
-	$("#guide-101").css("background", "transparent");
-	$("#guide-106").css("background", "transparent");
-	$("#guide-103").css("background", "transparent");
-	$("#guide-104").css("background", "transparent");
-	$("#guide-105").css("background", "transparent");
-	$("#guide-102").css("background", "#fff");
-	idbutton = "2";
-	$.post( "/api/default.php", function( data ) {
-	  $( "#app" ).html( data );
-});
-});
-
-$("#guide-103").click(function(){
-	playToogle();
-	closeSearchbar();
-	$("#guide-102").css("background", "transparent");
-	$("#guide-104").css("background", "transparent");
-	$("#guide-105").css("background", "transparent");
-	$("#guide-106").css("background", "transparent");
-	$("#guide-101").css("background", "transparent");
-	$("#guide-103").css("background", "#fff");
-	idbutton = "3";
-	$.post( "/api/gostei.php", function( data ) {
-				  $( "#app" ).html( data );
-	});
-});
-
-$("#guide-104").click(function(){
-	playToogle();
-	closeSearchbar();
-	$("#guide-101").css("background", "transparent");
-	$("#guide-102").css("background", "transparent");
-	$("#guide-103").css("background", "transparent");
-	$("#guide-105").css("background", "transparent");
-	$("#guide-106").css("background", "transparent");
-	$("#guide-104").css("background", "#fff");
-	idbutton = "4";
-	$.post( "/api/news.php", function( data ) {
-				  $( "#app" ).html( data );
-	});
-});
-
-$("#guide-105").click(function(){
-	playToogle();
-	closeSearchbar();
-	$("#guide-101").css("background", "transparent");
-	$("#guide-102").css("background", "transparent");
-	$("#guide-103").css("background", "transparent");
-	$("#guide-104").css("background", "transparent");
-	$("#guide-106").css("background", "transparent");
-	$("#guide-105").css("background", "#fff");
-	idbutton = "5";
-	$.post( "/api/account.php", function( data ) {
-				  $( "#app" ).html( data );
-	});
-});
-
-$("#guide-106").click(function(){
-	playToogle();
-	closeSearchbar();
-	$("#guide-101").css("background", "transparent");
-	$("#guide-102").css("background", "transparent");
-	$("#guide-103").css("background", "transparent");
-	$("#guide-104").css("background", "transparent");
-	$("#guide-105").css("background", "transparent");
-	$("#guide-106").css("background", "#fff");
-	idbutton = "6";
-	$.post( "/api/settings.php", function( data ) {
-				  $( "#app" ).html( data );
-	});
-});
-}
 
 function playToogle(){
 	toggle.play();
@@ -320,9 +255,4 @@ function closeSearchbar(){
 		$("#guide-101").css("background", "transparent");
 		$(".tuturial .search").show();
 		$(".tuturial .sair").hide();
-}
-
-
-function homeAcess(){
-	$("#guide-102").css("background", "#fff");
 }

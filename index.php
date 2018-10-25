@@ -19,5 +19,8 @@ include 'template/splash.phtml';
 include 'template/browser.phtml';
 ?>
 
+<script src="/javascript/navigation-header-bar.js"></script>
+<script src="/javascript/videoNavigation.js"></script>
+
 </body>
 </html>
