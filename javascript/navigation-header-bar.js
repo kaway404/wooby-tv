@@ -88,7 +88,6 @@ function acessleftbar(){
 }
 
 function acessSearchbar(){
-	if(navigation_leftbar == "0"){
 		navigation_leftbar = "1";
 		on_leftbar = "1";
 		idbutton = "1";
@@ -104,7 +103,6 @@ function acessSearchbar(){
 		$.post( "/api/busca.php", function( data ) {
 				  $( "#app" ).html( data );
 		});
-	}
 }
 
 function closeleftbar(){
