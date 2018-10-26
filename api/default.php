@@ -77,7 +77,7 @@
     preload="auto"
     poster="/img/video.jpg"
     data-setup='{}'>
-  <source src="/videos/naruto.mkv" autoplay type="video/mp4"></source>
+  <!-- <source src="" autoplay type="video/mp4"></source> -->
 </video>
 		<!-- <div class="bottom"></div> -->
 	</div>
