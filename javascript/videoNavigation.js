@@ -30,11 +30,12 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 	 else if(tecla == 38) {
 	 	videoTop();
 	 }
-	}
+}
  	
 });
 
 function videoBottom(){
+	if(home == 1){
 	if(xandeco < maxscroll){
 		xandeco += 1;
 		let scroll = "#genen" + xandeco;
@@ -59,9 +60,11 @@ function videoBottom(){
 		$(proximoscroll).css("opacity", "1");
 	}
 }
+}
 
 
 function videoTop(){
+	if(home == 1){
 		if(xandeco < 1 ){
 			xandeco = 1;
 			let scroll = "#genen" + xandeco;
@@ -108,11 +111,13 @@ function videoTop(){
 		$(proximoscroll).css("box-shadow", "2px 3px 4px rgba(0,0,0,.50)");
 		$(proximoscroll).css("opacity", "1");
 		}
+	}
 }
 
 
 
 function videoRight(){
+	if(home == 1){
 	if(on_leftbar == "0"){
 	if(videoAtual == videoMax){
 		console.log("maximo");
@@ -172,10 +177,12 @@ function videoRight(){
 }
 }
 }
+}
 
 
 
 function videoLeft(){
+	if(home == 1){
 	if(on_leftbar == "0"){
 	if(videoAtual > 0){
 		videoAtual -= 1;
@@ -208,6 +215,7 @@ function videoLeft(){
 	}
 }
 }
+}
 
 function atualvlol(){
 	if(atualv == 0){
@@ -221,6 +229,7 @@ function atualvlol(){
 }
 
 function enter(){
+	if(home == 1){
 	if(on_leftbar == "0"){
 	if ($('.watch').is(":visible")){
 		console.log("watch visible");
@@ -230,6 +239,7 @@ function enter(){
 	setTimeout(function(){
 		$(".watch").css("transform", "scale(1)");
 	}, 300);
+}
 }
 }
 }

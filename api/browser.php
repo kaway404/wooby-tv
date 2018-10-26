@@ -70,6 +70,7 @@ $("#guide-102").click(function(){
 	$("#guide-105").css("background", "transparent");
 	$("#guide-102").css("background", "#fff");
 	idbutton = "2";
+	home = 1;
 	$.post( "/api/default.php", function( data ) {
 	  $( "#app" ).html( data );
 });

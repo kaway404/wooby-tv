@@ -4,6 +4,7 @@ let idbutton = "0";
 let iddefault = "0";
 let atualv = 1;
 let searchbar = 0;
+let home = 1;
 
 document.querySelector('body').addEventListener('keydown', function(event) {
  
@@ -70,6 +71,7 @@ function homets(){
 		$("#guide-106").css("background", "transparent");
 		$(".tuturial .search").show();
 		$(".tuturial .sair").hide();
+		home = 1;
 	}
 }
 }
@@ -91,6 +93,7 @@ function acessleftbar(){
 		$("#guide-106").css("background", "transparent");
 		$(".tuturial .search").hide();
 		$(".tuturial .sair").hide();
+		home = 1;
 		$.post( "/api/default.php", function( data ) {
 				  $( "#app" ).html( data );
 		});
@@ -137,6 +140,7 @@ function closeleftbar(){
 		$.post( "/api/default.php", function( data ) {
 				  $( "#app" ).html( data );
 			});
+		home = 1;
 }
 }
 
@@ -155,6 +159,7 @@ function navigationBarBottom(){
 				  $( "#app" ).html( data );
 			});
 			idbutton = "2";
+			home = 1;
 		}
 		else if(idbutton == "2"){
 			toggle.play();
