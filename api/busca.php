@@ -1,5 +1,5 @@
 <div class="browsernani">
 <div class="tab">
-	<a>Busca</a>
+	<input type="text" placeholder="Buscar" class="buscar">
 </div>
 </div>

@@ -53,6 +53,7 @@ $("#guide-101").click(function(){
 	$("#guide-106").css("background", "transparent");
 	$("#guide-101").css("background", "#fff");
 	idbutton = "1";
+	searchbar = 1;
 	$.post( "/api/busca.php", function( data ) {
 	  $( "#app" ).html( data );
 });
@@ -60,6 +61,7 @@ $("#guide-101").click(function(){
 
 $("#guide-102").click(function(){
 	playToogle();
+	searchbar = 0;
 	closeSearchbar();
 	$("#guide-101").css("background", "transparent");
 	$("#guide-106").css("background", "transparent");
@@ -75,6 +77,7 @@ $("#guide-102").click(function(){
 
 $("#guide-103").click(function(){
 	playToogle();
+	searchbar = 0;
 	closeSearchbar();
 	$("#guide-102").css("background", "transparent");
 	$("#guide-104").css("background", "transparent");
@@ -90,6 +93,7 @@ $("#guide-103").click(function(){
 
 $("#guide-104").click(function(){
 	playToogle();
+	searchbar = 0;
 	closeSearchbar();
 	$("#guide-101").css("background", "transparent");
 	$("#guide-102").css("background", "transparent");
@@ -106,6 +110,7 @@ $("#guide-104").click(function(){
 $("#guide-105").click(function(){
 	playToogle();
 	closeSearchbar();
+	searchbar = 0;
 	$("#guide-101").css("background", "transparent");
 	$("#guide-102").css("background", "transparent");
 	$("#guide-103").css("background", "transparent");
@@ -121,6 +126,7 @@ $("#guide-105").click(function(){
 $("#guide-106").click(function(){
 	playToogle();
 	closeSearchbar();
+	searchbar = 0;
 	$("#guide-101").css("background", "transparent");
 	$("#guide-102").css("background", "transparent");
 	$("#guide-103").css("background", "transparent");

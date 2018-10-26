@@ -3,13 +3,13 @@ let on_leftbar = "0";
 let idbutton = "0";
 let iddefault = "0";
 let atualv = 1;
+let searchbar = 0;
 
 document.querySelector('body').addEventListener('keydown', function(event) {
  
 	var tecla = event.keyCode;
 	if(logged == 0){
 	if(tecla == 13) {
-	 
 	 // tecla ENTER
 		
 	} else if(tecla == 27) {
@@ -49,7 +49,9 @@ function homets(){
 	navigation_leftbar = "0";
 	on_leftbar = "0";
 	idbutton = "0";
+	searchbar = 0;
 		playToogle();
+		if(idbutton == 1){
 		$("#guide-101").css("background", "transparent");
 		$("#guide-102").css("background", "transparent");
 		$("#guide-103").css("background", "transparent");
@@ -58,9 +60,17 @@ function homets(){
 		$("#guide-106").css("background", "transparent");
 		$(".tuturial .search").show();
 		$(".tuturial .sair").hide();
-		$.post( "/api/default.php", function( data ) {
-				  $( "#app" ).html( data );
-		});
+	}
+	else if(idbutton == 2){
+		$("#guide-101").css("background", "transparent");
+		$("#guide-102").css("background", "transparent");
+		$("#guide-103").css("background", "transparent");
+		$("#guide-104").css("background", "transparent");
+		$("#guide-105").css("background", "transparent");
+		$("#guide-106").css("background", "transparent");
+		$(".tuturial .search").show();
+		$(".tuturial .sair").hide();
+	}
 }
 }
 
@@ -71,6 +81,7 @@ function acessleftbar(){
 		navigation_leftbar = "1";
 		on_leftbar = "1";
 		idbutton = "2";
+		searchbar = 0;
 		playToogle();
 		$("#guide-101").css("background", "transparent");
 		$("#guide-102").css("background", "#fff");
@@ -88,9 +99,11 @@ function acessleftbar(){
 }
 
 function acessSearchbar(){
+	if(searchbar == 0){
 		navigation_leftbar = "1";
 		on_leftbar = "1";
 		idbutton = "1";
+		searchbar = 1;
 		playToogle();
 		$("#guide-102").css("background", "transparent");
 		$("#guide-101").css("background", "#fff");
@@ -103,6 +116,7 @@ function acessSearchbar(){
 		$.post( "/api/busca.php", function( data ) {
 				  $( "#app" ).html( data );
 		});
+	}
 }
 
 function closeleftbar(){
@@ -110,6 +124,7 @@ function closeleftbar(){
 	navigation_leftbar = "0";
 	on_leftbar = "0";
 	idbutton = "0";
+	searchbar = 0;
 		playToogle();
 		$("#guide-101").css("background", "transparent");
 		$("#guide-102").css("background", "transparent");
@@ -220,6 +235,7 @@ function navigationBarTop(){
 			if ($('.left-menu-browser-bro .bottom').is(":visible")){
 			playToogle();
 			closeSearchbar();
+			searchbar = 0;
 			$("#guide-106").css("background", "transparent");
 			$("#guide-105").css("background", "#fff");
 			idbutton = "5";
@@ -231,6 +247,7 @@ function navigationBarTop(){
 		else if(idbutton == "5"){
 			playToogle();
 			closeSearchbar();
+			searchbar = 0;
 			$("#guide-105").css("background", "transparent");
 			$("#guide-104").css("background", "#fff");
 			idbutton = "4";
@@ -241,6 +258,7 @@ function navigationBarTop(){
 		else if(idbutton == "4"){
 			playToogle();
 			closeSearchbar();
+			searchbar = 0;
 			$("#guide-104").css("background", "transparent");
 			$("#guide-103").css("background", "#fff");
 			idbutton = "3";
@@ -251,6 +269,7 @@ function navigationBarTop(){
 		else if(idbutton == "3"){
 			playToogle();
 			closeSearchbar();
+			searchbar = 0;
 			$("#guide-103").css("background", "transparent");
 			$("#guide-102").css("background", "#fff");
 			idbutton = "2";
@@ -264,6 +283,7 @@ function navigationBarTop(){
 			$("#guide-102").css("background", "transparent");
 			$("#guide-101").css("background", "#fff");
 			idbutton = "1";
+			searchbar = 1;
 			$.post( "/api/busca.php", function( data ) {
 				  $( "#app" ).html( data );
 			});
