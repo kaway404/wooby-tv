@@ -13,13 +13,14 @@
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		background: transparent;
+		background: rgba(0,0,0,.80);
 		transform: translate(-50%, -50%);
 		color: #fff;
 		padding: 5em;
 		width: 100%;
 		height: 100%;
 		text-align: center;
+		display: block;
 	}
 
 	.welcome .background{
@@ -74,6 +75,7 @@
 </style>
 
 <script type="text/javascript">
+	let optionval = 1;
 	let logged = 1;
 	$(".nothing").click(function(){
 		$(".welcome").hide();
@@ -108,4 +110,86 @@ function closealt(){
 	logged = 0;
 	playToogle();
 }
+
+document.querySelector('body').addEventListener('keydown', function(event) {
+ 
+	var tecla = event.keyCode;
+	if(logged == 1){
+	if(tecla == 40) {
+	 	optionsBottom();
+	 }
+	 else if(tecla == 38) {
+	 	optionsTop();
+	 }
+	 else if(tecla == 13) {
+	 	enterOption();
+	 }
+	}
+ 	
+});
+
+function optionsBottom(){
+	toggle.play();
+	setTimeout(function(){
+	toggle.pause();
+	toggle.currentTime = 0;
+	}, 100);
+	if(optionval == 1){
+		optionval += 1;
+		$(".yeah").css("background-color", "#000");
+		$(".nothing").css("background-color", "#fff");
+		$(".nothing").css("color", "#000");
+		$(".yeah").css("color", "#fff");
+	}
+	else{
+		optionval = 1;
+		$(".yeah").css("background-color", "#fff");
+		$(".nothing").css("background-color", "#000");
+		$(".yeah").css("color", "#000");
+		$(".nothing").css("color", "#fff");
+	}
+}
+
+function optionsTop(){
+	toggle.play();
+	setTimeout(function(){
+	toggle.pause();
+	toggle.currentTime = 0;
+	}, 100);
+	if(optionval == 2){
+		optionval = 1;
+		$(".yeah").css("background-color", "#fff");
+		$(".nothing").css("background-color", "#000");
+		$(".yeah").css("color", "#000");
+		$(".nothing").css("color", "#fff");
+	}
+	else{
+		optionval = 2;
+		$(".yeah").css("background-color", "#000");
+		$(".nothing").css("background-color", "#fff");
+		$(".nothing").css("color", "#000");
+		$(".yeah").css("color", "#fff");
+	}
+}
+
+function enterOption(){
+	if(optionval == 1){
+		$(".welcome").hide();
+		$("#guide-105").css("background", "#fff");
+			idbutton = "5";
+			navigation_leftbar = "1";
+			on_leftbar = "1";
+			logged = 0;
+			playToogle();
+		$.post( "/api/account.php", function( data ) {
+				  $( "#app" ).html( data );
+		});
+	}
+	else{
+		$(".welcome").hide();
+		logged = 0;
+		playToogle();
+	}
+}
+
 </script>

@@ -9,17 +9,17 @@
 <div class="watch-list" id="list1">
 	<div class="wath-app-list" id="video1">
 		<div class="bottom" id="bottom1">
-			<h1>Black Clover</h1>
+			<h1>Naruto Shippuden</h1>
 		</div>
 	</div>
 	<div class="wath-app-list" id="video2">
 		<div class="bottom" id="bottom2">
-			<h1>Black Clover</h1>
+			<h1>Naruto Shippuden</h1>
 		</div>
 	</div>
 	<div class="wath-app-list" id="video3">
 		<div class="bottom" id="bottom3">
-			<h1>Black Clover</h1>
+			<h1>Naruto Shippuden</h1>
 		</div>
 	</div>
 </div>
@@ -31,17 +31,17 @@
 <div class="watch-list" id="list2">
 	<div class="wath-app-list" id="video1">
 		<div class="bottom" id="bottom1">
-			<h1>Black Clover</h1>
+			<h1>Naruto Shippuden</h1>
 		</div>
 	</div>
 	<div class="wath-app-list" id="video2">
 		<div class="bottom" id="bottom2">
-			<h1>Black Clover</h1>
+			<h1>Naruto Shippuden</h1>
 		</div>
 	</div>
 	<div class="wath-app-list" id="video3">
 		<div class="bottom" id="bottom3">
-			<h1>Black Clover</h1>
+			<h1>Naruto Shippuden</h1>
 		</div>
 	</div>
 </div>
@@ -58,10 +58,10 @@
 	<div class="avatar">
 	</div>
 	<h1 class="title">
-		AURORA WARRIOR - MURDER SONG
+		Naruto Shippuuden O Filme 5
 	</h1>
 	<h1 class="title hold">
-		AURORA WARRIOR - MURDER SONG - Publicado em 25/10/2018
+		Prisão de Sangue (2011)
 	</h1>
 	</div>
 	<div class="notpreview">
@@ -70,7 +70,22 @@
 				<div class="toggle"></div>
 			</div>
 		</div>
+		<video
+    id="my-player"
+    class="video-js"
+    id="player"
+    preload="auto"
+    poster="/img/video.jpg"
+    data-setup='{}'>
+  <source src="/videos/naruto.mkv" autoplay type="video/mp4"></source>
+</video>
+		<!-- <div class="bottom"></div> -->
 	</div>
 </div>
+
+<script type="text/javascript">
+
+</script>
+
 
 </div>

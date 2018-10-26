@@ -90,12 +90,10 @@
 .watch .preview{
 	width: 100%;
 	height: 100%;
-	background-image: url("https://i.ytimg.com/vi/40aex8C8Zzw/maxresdefault.jpg");
-	background-size: cover;
 }
 
 .watch .preview .avatar{
-	background-image: url(https://yt3.ggpht.com/-Feez6O4KkT8/AAAAAAAAAAI/AAAAAAAAARE/hgTr1LYFp14/s176-nd-c-c0xffffffff-rj-k-no/photo.jpg);
+	background-image: url(/img/avatar.jpg);
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
@@ -127,6 +125,7 @@
 	left: 150px;
 	bottom: 40px;
 	font-size: 2em;
+	z-index: 1000000;
 }
 
 .watch .preview .margin .hold{
@@ -135,6 +134,7 @@
 	left: 150px;
 	bottom: -5px;
 	font-size: 1.5em;
+	z-index: 1000000;
 }
 
 .watch .notpreview .progresste{
@@ -146,16 +146,18 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 5px;
+	z-index: 1000000;
 }
 
 .watch .notpreview .subreprogress{
-	width: 5%;
+	width: 0%;
 	height: 100%;
 	position: relative;
 	float: left;
 	left: 0;
 	background: #df2323;
 	border-radius: 5px;
+	z-index: 1000000;
 }
 
 .watch .notpreview .subreprogress .toggle{
@@ -169,6 +171,26 @@
 	left: 94%;
 }
 
-.watch .notpreview .subreprogress .toggle:active{
+.watch .notpreview .video-js{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: #000;
+}
 
+.watch .bottom{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 86px;
+	background: #000;
+	z-index: 10000000;
+}
+
+.watch #player_controls{
+	position: absolute;
+	z-index: 100000;
 }

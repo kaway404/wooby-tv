@@ -18,9 +18,9 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 		atualvlol();
 		videoLeft();
 	}
-	else if(tecla == 13){
-		enter();
-	}
+	// else if(tecla == 13){
+	// 	enter();
+	// }
 	else if(tecla == 27){
 		exitvideo();
 	}
