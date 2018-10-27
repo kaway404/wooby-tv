@@ -1,4 +1,4 @@
-let videoAtual = 1;
+let videoAtual = 2;
 let xandeco = 1;
 let maxscroll = 2;
 let videohtml = scroll + " " + "#video" + videoAtual;
@@ -281,6 +281,7 @@ function playToogle(){
 function clear(){
 	videoAtual = 0;
 }
+
 
 function exitvideo(){
 	if ($('.watch').is(":visible")){
