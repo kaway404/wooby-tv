@@ -38,8 +38,8 @@
 	$.post( "/api/default.php", function( data ) {
 	  $( "#app" ).html( data );
 	});
-
 let hoverhome = 0;
+
 
 $( ".center-browser-bro" ).mouseover(function() {
 	if(home == 1){
@@ -151,6 +151,7 @@ $("#guide-105").click(function(){
 	playToogle();
 	closeSearchbar();
 	searchbar = 0;
+	account = 1;
 	$("#guide-101").css("background", "transparent");
 	$("#guide-102").css("background", "transparent");
 	$("#guide-103").css("background", "transparent");

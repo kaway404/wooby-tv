@@ -5,6 +5,7 @@ let iddefault = "0";
 let atualv = 1;
 let searchbar = 0;
 let home = 1;
+let accountbtn = 1;
 
 document.querySelector('body').addEventListener('keydown', function(event) {
  
@@ -41,9 +42,11 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 	  homets();
 		
 	}
-	}
+}
+
  
 });
+
 
 function homets(){
 	if(navigation_leftbar == "1"){
@@ -72,6 +75,17 @@ function homets(){
 		$(".tuturial .search").show();
 		$(".tuturial .sair").hide();
 		home = 1;
+	}
+	else if(idbutton == 5){
+		$("#guide-101").css("background", "transparent");
+		$("#guide-102").css("background", "transparent");
+		$("#guide-103").css("background", "transparent");
+		$("#guide-104").css("background", "transparent");
+		$("#guide-105").css("background", "transparent");
+		$("#guide-106").css("background", "transparent");
+		$(".tuturial .search").show();
+		$(".tuturial .sair").hide();
+		account = 0;
 	}
 }
 }
@@ -202,6 +216,7 @@ function navigationBarBottom(){
 				  $( "#app" ).html( data );
 			});
 			idbutton = "5";
+			account = 1;
 		}
 		else if(idbutton == "5"){
 			block.play();
@@ -247,6 +262,7 @@ function navigationBarTop(){
 			$.post( "/api/account.php", function( data ) {
 				  $( "#app" ).html( data );
 			});
+			account = 1;
 		}
 		}
 		else if(idbutton == "5"){
